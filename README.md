@@ -1,23 +1,23 @@
 A modern, responsive React-based website developed for a specialized chemistry tutor offering courses for grades VIII-XII, with particular focus on NEET and JEE examination preparation.
 
-#🧪 Project Overview
+# 🧪 Project Overview
 RSChemtutor is a full-featured educational platform designed to enhance the online presence of chemistry tutoring services and streamline student enrollment. The website showcases specialized teaching methods, course offerings, and provides an easy way for students to connect with the instructor.
 
-#⚛️ Tech Stack
+# ⚛️ Tech Stack
 
-##React 19: Utilizing the latest React features for optimal performance
+## React 19: Utilizing the latest React features for optimal performance
 
-##Tailwind CSS: For responsive, utility-first styling approach
+## Tailwind CSS: For responsive, utility-first styling approach
 
-##React Router DOM: Handling navigation within the application
+## React Router DOM: Handling navigation within the application
 
-##Intersection Observer API: For scroll-based animations and effects
+## Intersection Observer API: For scroll-based animations and effects
 
-##Custom Form Validation: Client-side validation for enrollment forms
+## Custom Form Validation: Client-side validation for enrollment forms
 
-#✨ Features
+# ✨ Features
 
-##📱 Responsive Design
+## 📱 Responsive Design
 
 Mobile-first approach ensuring perfect display across all devices
 
@@ -25,7 +25,7 @@ Hamburger menu for mobile navigation with smooth transitions
 
 Responsive grid layouts adapting to different screen sizes
 
-##🔍 SEO Optimization
+## 🔍 SEO Optimization
 
 Semantic HTML structure
 
@@ -33,7 +33,7 @@ Meta tags for improved search engine visibility
 
 Optimal loading performance for better rankings
 
-##🎯 User Experience
+## 🎯 User Experience
 
 Smooth Scroll Navigation: Enhanced page navigation with anchor links
 
@@ -43,7 +43,7 @@ Scroll Progress Bar: Visual indicator of reading progress
 
 Back to Top Button: Quick navigation to the top of the page
 
-##📝 Contact & Enrollment System
+## 📝 Contact & Enrollment System
 
 Interactive Form: Real-time validation for user inputs
 
@@ -51,7 +51,7 @@ Form Submission: Vercel-ready API endpoint for contact processing
 
 Success/Error Handling: Clear user feedback on form submission
 
-##🎨 Visual Design
+## 🎨 Visual Design
 
 Chemistry-Themed Elements: Molecular structures and atom animations
 
@@ -62,7 +62,7 @@ Micro-interactions: Subtle animations providing engaging experience
 Card-Based Content: Organized information in visually appealing cards
 
 
-#📋 Key Components
+# 📋 Key Components
 
 Hero Section: Eye-catching introduction with animated chemistry elements
 
@@ -78,7 +78,7 @@ Contact Section: Enrollment form with validation and contact information
 
 Header & Footer: Navigation and essential links
 
-#🚀 Deployment
+# 🚀 Deployment
 The project is configured for seamless deployment on Vercel, with: 
 
 Optimized build settings
