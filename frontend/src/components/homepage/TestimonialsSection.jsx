@@ -1,38 +1,94 @@
+import { useEffect, useRef } from 'react';
+
 function TestimonialsSection() {
+  const sectionRef = useRef(null);
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    // Store the reference in a variable to avoid React hooks warning
+    const currentRef = sectionRef.current;
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target === currentRef) {
+              currentRef.style.opacity = '1';
+              currentRef.style.transform = 'translateY(0)';
+            }
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    cardsRef.current.forEach((card, index) => {
+      if (card) {
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, 300 + (index * 150));
+      }
+    });
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
   const testimonials = [
     {
-      name: "Ravi Kumar",
-      role: "Grade X Student",
-      content: "The foundation course helped me develop a strong understanding of chemical equations. Now I can solve complex problems with confidence.",
-      avatar: "RK"
+      name: "Raguram P",
+      role: "Grade VIII Student",
+      content: "The crash course greatly strengthened my understanding of NCERT concepts with the help of effective mnemonics and tricks. Innovative projects like rotating charts and fishbone diagrams made learning more interactive and engaging. Sumathi Ma'am's inspiring teaching style made even complex topics easy to grasp.",
+      avatar: "RS"
     },
     {
-      name: "Priya Sharma",
-      role: "Parent",
-      content: "My daughter struggled with chemistry until she joined these classes. The way complex concepts are broken down made all the difference.",
-      avatar: "PS"
+      name: "Amritha P",
+      role: "Grade XI Student",
+      content: "Organic Chemistry felt manageable with Ma'am's structured approach, starting from the basics and gradually building up to advanced concepts. Her clear explanations, frequent revisions, and doubt-clearing sessions significantly improved my confidence for competitive exams.",
+      avatar: "AV"
     },
     {
-      name: "Amit Patel",
-      role: "NEET Qualifier",
-      content: "Starting these classes in 8th grade gave me a huge advantage. By the time I reached 12th, chemistry was my strongest subject in NEET.",
-      avatar: "AP"
+      name: "Niranjan K",
+      role: "Grade XI Student",
+      content: "Concepts were taught in a crisp and clear manner, which made revision more effective. Engaging activities like mind maps and practice sessions kept the learning process fun and interactive. The sessions strengthened my academic foundation in chemistry.",
+      avatar: "KN"
     }
   ];
   
   return (
-    <section id="testimonials" className="section bg-white">
-      <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-4 text-gray-800">Student Success Stories</h2>
-        <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-          Hear from our students who built strong chemistry foundations and achieved excellence in their academic journey.
-        </p>
+    <section 
+      id="testimonials" 
+      ref={sectionRef}
+      className="section py-24 bg-gradient-to-b from-white to-gray-50 transition-all duration-1000"
+      style={{ opacity: 0, transform: 'translateY(20px)' }}
+    >
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <span className="inline-block text-primary font-semibold mb-2 text-lg">What Our Students Say</span>
+          <h2 className="text-4xl font-bold mb-4 text-gray-800">Success Stories</h2>
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            Discover how our specialized chemistry teaching methodology has helped students achieve excellence in their academic journey.
+          </p>
+        </div>
         
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="card p-6">
+            <div 
+              key={index} 
+              ref={el => cardsRef.current[index] = el}
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
+              style={{ opacity: 0, transform: 'translateY(20px)' }}
+            >
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-semibold text-lg">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 text-primary flex items-center justify-center font-semibold text-lg">
                   {testimonial.avatar}
                 </div>
                 <div className="ml-4">
