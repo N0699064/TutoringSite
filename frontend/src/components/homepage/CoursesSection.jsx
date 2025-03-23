@@ -52,6 +52,7 @@ function CoursesSection() {
       schedule: "Weekdays only (Mon-Fri)",
       boards: "ICSE, CBSE, State Board",
       format: "Online (Thirumangalam offline available)",
+      price: "₹1,200",
       featured: false,
       color: "from-blue-500 to-cyan-400"
     },
@@ -70,7 +71,8 @@ function CoursesSection() {
       schedule: "Weekdays only (Mon-Fri)",
       boards: "ICSE, CBSE, State Board",
       format: "Online (Thirumangalam offline available)",
-      featured: false,  // Changed from true to false
+      price: "₹1,500",
+      featured: false,
       color: "from-primary to-secondary"
     },
     {
@@ -88,6 +90,7 @@ function CoursesSection() {
       schedule: "Weekdays only (Mon-Fri)",
       boards: "ICSE, CBSE, State Board",
       format: "Online (Thirumangalam offline available)",
+      price: "₹1,500",
       featured: true,
       color: "from-amber-500 to-orange-400"
     }
@@ -213,8 +216,9 @@ function CoursesSection() {
                       <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
                     </button>
                     
-                    <div className="text-center text-sm text-gray-500">
-                      Contact tutor for fees details
+                    <div className="text-center">
+                      <span className="text-lg font-semibold text-gray-800">{course.price}</span>
+                      <span className="text-sm text-gray-500"> for the full course</span>
                     </div>
                   </div>
                 </div>
