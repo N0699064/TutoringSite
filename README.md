@@ -5,15 +5,15 @@ RSChemtutor is a full-featured educational platform designed to enhance the onli
 
 # ⚛️ Tech Stack
 
-## React 19: Utilizing the latest React features for optimal performance
+React 19: Utilizing the latest React features for optimal performance
 
-## Tailwind CSS: For responsive, utility-first styling approach
+Tailwind CSS: For responsive, utility-first styling approach
 
-## React Router DOM: Handling navigation within the application
+React Router DOM: Handling navigation within the application
 
-## Intersection Observer API: For scroll-based animations and effects
+Intersection Observer API: For scroll-based animations and effects
 
-## Custom Form Validation: Client-side validation for enrollment forms
+Custom Form Validation: Client-side validation for enrollment forms
 
 # ✨ Features
 
