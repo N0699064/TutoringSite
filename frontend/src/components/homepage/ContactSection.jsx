@@ -49,7 +49,6 @@ function ContactSection() {
       default:
         break;
     }
-    
     return error;
   };
 
@@ -112,20 +111,23 @@ function ContactSection() {
     setFormStatus({ submitted: false, submitting: true, error: null });
     
     try {
-      // For Netlify Forms with React, we need to submit the form data as FormData
-      const formData = new FormData(e.target);
+      // Create form submission object
+      const formSubmission = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        course: formData.course,
+        newsletter: formData.newsletter
+      };
       
-      // Create a URLSearchParams object for the fetch request
-      const searchParams = new URLSearchParams();
-      for (const pair of formData) {
-        searchParams.append(pair[0], pair[1]);
-      }
-      
-      // Submit the form using fetch
-      const response = await fetch("/", {
+      // You can use an API route in Next.js or a third-party form service
+      const response = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: searchParams.toString(),
+        headers: { 
+          "Content-Type": "application/json" 
+        },
+        body: JSON.stringify(formSubmission),
       });
       
       if (!response.ok) {
@@ -290,16 +292,7 @@ function ContactSection() {
                   onSubmit={handleSubmit} 
                   ref={formRef}
                   name="enrollment"
-                  method="POST"
-                  data-netlify="true"
-                  netlify-honeypot="bot-field"
                 >
-                  {/* These hidden inputs are required for Netlify Forms */}
-                  <input type="hidden" name="form-name" value="enrollment" />
-                  <div hidden>
-                    <input name="bot-field" />
-                  </div>
-                  
                   {/* Name field */}
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name*</label>
