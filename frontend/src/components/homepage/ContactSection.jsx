@@ -48,6 +48,7 @@ function ContactSection() {
         break;
       default:
         break;
+
     }
     return error;
   };
@@ -118,11 +119,13 @@ function ContactSection() {
         phone: formData.phone,
         message: formData.message,
         course: formData.course,
-        newsletter: formData.newsletter
+        newsletter: formData.newsletter ? "Yes" : "No"
       };
       
-      // You can use an API route in Next.js or a third-party form service
-      const response = await fetch("/api/contact", {
+      console.log("Submitting form data:", formSubmission);
+      
+      // Using Formspree service with your ID
+      const response = await fetch("https://formspree.io/f/xzzegvgk", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json" 
@@ -130,12 +133,17 @@ function ContactSection() {
         body: JSON.stringify(formSubmission),
       });
       
+      console.log("Form response status:", response.status);
+      
       if (!response.ok) {
-        throw new Error('Form submission failed');
+        const errorData = await response.text();
+        console.error("Form error details:", errorData);
+        throw new Error(`Form submission failed: ${response.status}`);
       }
       
       // Form submitted successfully
       setFormStatus({ submitted: true, submitting: false, error: null });
+      // Reset form
       setFormData({
         name: '',
         email: '',
