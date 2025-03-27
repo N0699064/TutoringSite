@@ -89,4 +89,4 @@ Environment variable support
 
 Preview deployments for testing
 
-https://rs-chemtutor-edu.vercel.app/
+https://rs-chem-tutor.vercel.app/
