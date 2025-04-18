@@ -1,5 +1,8 @@
 A modern, responsive React-based website developed for a specialized chemistry tutor offering courses for grades VIII-XII, with particular focus on NEET and JEE examination preparation.
 
+![chemtutor](https://github.com/user-attachments/assets/5a16bb3a-5633-4274-9f05-7bcd83387866)
+
+
 # 🧪 Project Overview
 RSChemtutor is a full-featured educational platform designed to enhance the online presence of chemistry tutoring services and streamline student enrollment. The website showcases specialized teaching methods, course offerings, and provides an easy way for students to connect with the instructor.
 
