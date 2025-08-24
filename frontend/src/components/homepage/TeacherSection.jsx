@@ -72,17 +72,16 @@ function TeacherSection() {
               className="order-2 md:order-1 transition-all duration-1000"
               style={{ opacity: 0, transform: 'translateX(-20px)' }}
             >
-              <span className="inline-block text-primary font-semibold mb-2 text-lg">Meet Your Instructor</span>
+              <span className="inline-block text-primary font-semibold mb-2 text-lg">Meet Your Tutor</span>
               <h2 className="text-4xl font-bold mb-6 text-gray-800 relative">
-                Mrs. Sumathiraja
+                Mr. Micheal Akinfenwa
                 <span className="absolute -bottom-3 left-0 w-20 h-1.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span>
               </h2>
               
               <p className="text-gray-700 mb-4">
-                With over 20 years of teaching experience, Mrs. Sumathiraja specializes in making complex chemistry concepts accessible and easy to understand for students of all learning styles.
-              </p>
+Michael Akinfenwa helps students master Mathematics, Physics, Chemistry, and Biology by breaking down complex topics into simple, clear steps. Using innovative techniques, he makes learning engaging and memorable, ensuring students build confidence and retain knowledge long after lessons end.              </p>
               <p className="text-gray-700 mb-6">
-                She employs innovative mnemonic methods to help students better remember chemical formulas, reactions, and concepts, ensuring that key information stays with them long after the classes end.
+                {/* She employs innovative mnemonic methods to help students better remember chemical formulas, reactions, and concepts, ensuring that key information stays with them long after the classes end. */}
               </p>
               
               <div className="space-y-5">
@@ -94,10 +93,10 @@ function TeacherSection() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-sm font-semibold text-gray-800">Teaching Experience</h4>
-                    <p className="text-gray-600">20+ years teaching chemistry to students in grades 8-12</p>
+                    <p className="text-gray-600">5+ years mentoring and supporting students in Mathematics, Physics, Chemistry, and Biology</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-primary/10 p-2 rounded-full">
                     <svg className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -107,11 +106,11 @@ function TeacherSection() {
                     </svg>
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-sm font-semibold text-gray-800">Educational Qualification</h4>
-                    <p className="text-gray-600">Masters in Chemistry with specialization in Organic Chemistry</p>
+                    <h4 className="text-sm font-semibold text-gray-800">Educational Background</h4>
+                    <p className="text-gray-600">BEng in Civil Engineering, with advanced training in data science and analytics</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-primary/10 p-2 rounded-full">
                     <svg className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -119,11 +118,11 @@ function TeacherSection() {
                     </svg>
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-sm font-semibold text-gray-800">Success Rate</h4>
-                    <p className="text-gray-600">90% of students achieve top grades in chemistry</p>
+                    <h4 className="text-sm font-semibold text-gray-800">Student Success</h4>
+                    <p className="text-gray-600">Proven track record of helping students build confidence and achieve top results</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-primary/10 p-2 rounded-full">
                     <svg className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -132,7 +131,7 @@ function TeacherSection() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-sm font-semibold text-gray-800">Simplified Approach</h4>
-                    <p className="text-gray-600">Makes chemistry easy and engaging for all students</p>
+                    <p className="text-gray-600">Makes learning easy, engaging, and tailored to each student's needs</p>
                   </div>
                 </div>
               </div>
@@ -143,9 +142,10 @@ function TeacherSection() {
               className="order-1 md:order-2 transition-all duration-1000"
               style={{ opacity: 0, transform: 'translateX(20px)' }}
             >
-              <div className="relative">
+              <div className="relative flex flex-col items-center">
+                {/* Animated atom/molecule first */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full blur-md opacity-30"></div>
-                <div className="bg-gradient-to-br from-gray-50 to-white rounded-full p-8 relative shadow-xl">
+                <div className="bg-gradient-to-br from-gray-50 to-white rounded-full p-8 relative shadow-xl mt-0">
                   {/* Elegant Atom/Molecule Design */}
                   <div className="w-64 h-64 rounded-full bg-gradient-to-r from-primary/5 to-secondary/5 p-1 mx-auto relative overflow-hidden">
                     {/* Center nucleus */}
@@ -154,7 +154,6 @@ function TeacherSection() {
                         <span className="text-white font-bold text-xl">S</span>
                       </div>
                     </div>
-                    
                     {/* Orbiting electrons */}
                     <div ref={orbitRef} className="absolute inset-0 z-0">
                       {/* First orbit */}
@@ -162,20 +161,17 @@ function TeacherSection() {
                         <div className="absolute w-4 h-4 rounded-full bg-primary shadow-lg" style={{top: '50%', left: '10%', transform: 'translate(-50%, -50%)'}}>
                         </div>
                       </div>
-                      
                       {/* Second orbit */}
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 rounded-full border-2 border-secondary/30" style={{borderRadius: '50%', borderStyle: 'dashed', transform: 'translate(-50%, -50%) rotate(45deg)'}}>
                         <div className="absolute w-4 h-4 rounded-full bg-secondary shadow-lg" style={{top: '20%', right: '10%', transform: 'translate(-50%, -50%)'}}>
                         </div>
                       </div>
-                      
                       {/* Third orbit */}
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5/6 h-5/6 rounded-full border-2 border-primary/30" style={{borderRadius: '50%', borderStyle: 'dashed', transform: 'translate(-50%, -50%) rotate(-30deg)'}}>
                         <div className="absolute w-4 h-4 rounded-full bg-gradient-to-r from-primary to-secondary shadow-lg" style={{bottom: '15%', left: '30%', transform: 'translate(-50%, -50%)'}}>
                         </div>
                       </div>
                     </div>
-                    
                     {/* Hexagonal background elements */}
                     <div className="absolute inset-0 opacity-10">
                       <svg width="100%" height="100%" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -183,7 +179,7 @@ function TeacherSection() {
                       </svg>
                     </div>
                   </div>
-                  
+                  {/* Atom/molecule bottom right icon and quote remain unchanged */}
                   <div className="absolute -bottom-3 -right-3 bg-white rounded-full p-3 shadow-lg">
                     <div className="bg-gradient-to-r from-primary to-secondary rounded-full p-1">
                       <div className="bg-white rounded-full p-2">
@@ -194,10 +190,15 @@ function TeacherSection() {
                     </div>
                   </div>
                 </div>
-                
+                {/* Tutor image, large and centered, now below the animation */}
+                <img 
+                  src="/michAkin.jpg" 
+                  alt="Mr. Micheal Akinfenwa" 
+                  className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-primary shadow-xl mt-8 z-20 bg-white"
+                />
                 <div className="mt-6">
                   <blockquote className="italic text-gray-600 text-center px-8">
-                    "Chemistry is not about memorizing formulas, it's about understanding the language of nature."
+                    "Education is the bridge between dreams and achievement."
                   </blockquote>
                 </div>
               </div>
