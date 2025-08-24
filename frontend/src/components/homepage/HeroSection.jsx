@@ -79,25 +79,28 @@ function HeroSection() {
               <span className="bg-primary text-white text-xs font-semibold rounded-full px-3 py-1 mr-2">
                 PREMIUM
               </span>
-              <span className="text-white text-sm">NEET & JEE Preparation</span>
+              <span className="text-white text-sm">GCSE & A Levels Preparation</span>
             </div>
             
             <h1 
-              ref={subtitleRef} 
-              className="text-6xl md:text-7xl font-bold leading-none mb-6 transition-all duration-1000 tracking-tight" 
+              ref={subtitleRef}
+              className="text-6xl md:text-7xl font-bold leading-none mb-6 transition-all duration-1000 tracking-tight"
               style={{ opacity: 0, transform: 'translateY(20px)' }}
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-white">Expand One's</span> 
-              <br />
-              <span className="text-white">Horizons</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-white">Build a Foundation</span>{' '}
+              <span className="text-white whitespace-nowrap">of Excellence</span>
             </h1>
             
             <p 
-              ref={descRef} 
-              className="text-xl text-gray-300 mb-8 max-w-lg transition-all duration-1000" 
+              ref={descRef}
+              className="text-xl text-gray-300 mb-8 max-w-lg transition-all duration-1000"
               style={{ opacity: 0, transform: 'translateY(20px)' }}
             >
-              To broaden one's knowledge, experience, or perspective. Pioneering excellence in chemical education with expert-led classes.
+              <span className="text-white font-semibold" style={{ textShadow: '0 0 8px #38bdf8, 0 0 16px #6366f1, 0 0 24px #0ea5e9' }}>Mathematics</span>,{' '}
+              <span className="text-white font-semibold" style={{ textShadow: '0 0 8px #34d399, 0 0 16px #22d3ee, 0 0 24px #a7f3d0' }}>Physics</span>,{' '}
+              <span className="text-white font-semibold" style={{ textShadow: '0 0 8px #fbbf24, 0 0 16px #f59e42, 0 0 24px #fde68a' }}>Chemistry</span>, and{' '}
+              <span className="text-white font-semibold" style={{ textShadow: '0 0 8px #f472b6, 0 0 16px #f87171, 0 0 24px #facc15' }}>Biology</span>
+              {' — high level tutoring designed to improve your knowledge and skills. Enroll today and take the next step toward academic excellence.'}
             </p>
             
             <div ref={btnRef} className="flex flex-col sm:flex-row gap-4 transition-all duration-1000" style={{ opacity: 0, transform: 'translateY(20px)' }}>
@@ -110,10 +113,10 @@ function HeroSection() {
               </button>
               
               <button 
-                onClick={() => scrollToSection('about')}
+                onClick={() => scrollToSection('courses')}
                 className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-medium rounded-lg px-8 py-3 transition-all duration-300 group"
               >
-                Explore Courses
+                View Courses
                 <svg className="inline-block ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -169,8 +172,8 @@ function HeroSection() {
                 {/* Central larger element */}
                 <div className="w-32 h-32 rounded-lg bg-gradient-to-r from-primary to-secondary p-0.5 shadow-xl shadow-primary/20">
                   <div className="w-full h-full rounded-lg bg-gradient-to-br from-gray-900 to-black flex flex-col items-center justify-center">
-                    <span className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-cyan-300">RS</span>
-                    <span className="text-xs text-gray-400 mt-1">Chemistry</span>
+                    <span className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-cyan-300">iCan</span>
+                    <span className="text-xs text-gray-400 mt-1">Tutoring</span>
                   </div>
                 </div>
                 
@@ -180,6 +183,16 @@ function HeroSection() {
                     <div className="w-full h-full rounded-lg bg-gradient-to-br from-gray-900 to-black flex flex-col items-center justify-center">
                       <span className="text-2xl font-bold text-white">Fe</span>
                       <span className="text-xs text-gray-400">26</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Math Element Pi (main) */}
+                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-16 h-16 animate-float" style={{ animationDelay: '1.2s' }}>
+                  <div className="w-full h-full rounded-lg bg-gradient-to-r from-green-500 to-emerald-400 p-0.5">
+                    <div className="w-full h-full rounded-lg bg-gradient-to-br from-gray-900 to-black flex flex-col items-center justify-center">
+                      <span className="text-3xl font-bold text-white">π</span>
+                      <span className="text-xs text-gray-400">3.14</span>
                     </div>
                   </div>
                 </div>
@@ -194,14 +207,31 @@ function HeroSection() {
                 </svg>
                 
                 {/* Orbiting particles */}
+                {/* Orbiting particles (some as pi symbols) */}
+                {/* More orbiting balls and pi symbols */}
                 <div className="absolute w-full h-full animate-spin-slow">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full"></div>
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-6 h-6 flex items-center justify-center">
+                    <span className="text-2xl text-green-300">π</span>
+                  </div>
+                  <div className="absolute top-10 left-10 w-4 h-4 bg-primary rounded-full"></div>
                 </div>
                 <div className="absolute w-full h-full animate-spin-slow-reverse">
-                  <div className="absolute bottom-12 right-12 w-4 h-4 bg-secondary rounded-full"></div>
+                  <div className="absolute bottom-12 right-12 w-6 h-6 flex items-center justify-center">
+                    <span className="text-2xl text-cyan-300">π</span>
+                  </div>
+                  <div className="absolute bottom-6 left-16 w-4 h-4 bg-secondary rounded-full"></div>
                 </div>
                 <div className="absolute w-full h-full animate-spin-medium">
                   <div className="absolute top-24 left-12 w-3 h-3 bg-accent rounded-full"></div>
+                  <div className="absolute bottom-8 right-24 w-5 h-5 bg-green-400 rounded-full"></div>
+                </div>
+                <div className="absolute w-full h-full animate-spin-slow" style={{ animationDelay: '1.5s' }}>
+                  <div className="absolute top-1/4 right-1/3 w-5 h-5 flex items-center justify-center">
+                    <span className="text-xl text-emerald-300">π</span>
+                  </div>
+                </div>
+                <div className="absolute w-full h-full animate-spin-slow-reverse" style={{ animationDelay: '2s' }}>
+                  <div className="absolute bottom-1/4 left-1/4 w-4 h-4 bg-cyan-400 rounded-full"></div>
                 </div>
               </div>
             </div>
