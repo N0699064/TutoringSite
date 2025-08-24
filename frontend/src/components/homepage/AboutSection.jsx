@@ -60,7 +60,7 @@ function AboutSection() {
         >
           <span className="inline-block text-primary font-semibold mb-2 text-lg">Discover Our Approach</span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 relative">
-            About Our Program
+            About Our Programs
             <span className="absolute -bottom-3 left-0 w-20 h-1.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span>
           </h2>
         </div>
@@ -71,12 +71,12 @@ function AboutSection() {
             className="space-y-6 transition-all duration-1000"
             style={{ opacity: 0, transform: 'translateY(20px)' }}
           >
-            <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Foundation for Excellence</h3>
+            <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Premium tutition that gets result</h3>
             <p className="text-gray-700">
-              Our chemistry program is specifically designed for students in grades 8-12 who are laying the groundwork for future success in competitive exams like NEET and JEE.
+              At iCan Tutoring, we deliver expert online tuition that meets the needs of every learner whether building foundations or pushing for top grades.
             </p>
             <p className="text-gray-700">
-              We focus on building strong fundamentals in chemistry with special emphasis on chemical formulas, balancing equations, and problem-solving techniques that form the backbone of advanced chemistry studies.
+            We focus on developing clear concepts across mathematics, science, and related fields, with expert guidance that strengthens problem-solving skills, boosts confidence, and inspires a lifelong love for learning.
             </p>
             
             <div className="relative bg-white/50 backdrop-blur-sm p-6 rounded-xl shadow-sm border-l-4 border-primary mt-8">
@@ -86,7 +86,7 @@ function AboutSection() {
                 </svg>
               </div>
               <p className="italic text-gray-700 pl-2">
-                "A strong foundation in chemistry basics is essential for success in competitive exams. Our targeted approach ensures students master these concepts early."
+                “Learning lights the mind, and education opens the world.”
               </p>
             </div>
           </div>
@@ -99,64 +99,69 @@ function AboutSection() {
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-20"></div>
             <div className="relative bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-xl">
               <h3 className="text-xl font-semibold mb-6 text-gray-800">
-                Why Choose Our Chemistry Classes?
+                Why Choose iCan Tutoring Classes?
               </h3>
               
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-gradient-to-r from-primary to-secondary text-white mr-3 flex-shrink-0">
-                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    {/* Classic trophy icon */}
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 21h8M12 17v4m-7-17v2a7 7 0 0 0 14 0V4M5 4h14M5 4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h1m12-6a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1" />
                     </svg>
                   </span>
-                  <span className="text-gray-700">Starting from basics and make your foundation strong</span>
+                  <span className="text-gray-700">Expert support tailored to exam success.</span>
                 </li>
-                
+
                 <li className="flex items-start">
                   <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-gradient-to-r from-primary to-secondary text-white mr-3 flex-shrink-0">
-                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    {/* Classic graduation cap icon */}
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 5l9 4-9 4-9-4 9-4zm0 8v6m0 0c-2.5 0-4.5-1-4.5-2.25M12 19c2.5 0 4.5-1 4.5-2.25" />
                     </svg>
                   </span>
-                  <span className="text-gray-700">Focused curriculum aligned with NEET/JEE requirements</span>
+                  <span className="text-gray-700">Engaging and interactive classes.</span>
                 </li>
-                
+
                 <li className="flex items-start">
                   <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-gradient-to-r from-primary to-secondary text-white mr-3 flex-shrink-0">
+                    {/* Heart icon */}
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.293l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.35l-7.682-7.682a4.5 4.5 0 010-6.364z" />
                     </svg>
                   </span>
-                  <span className="text-gray-700">Interactive online learning environment</span>
+                  <span className="text-gray-700">Personalized 1:1 and group support.</span>
                 </li>
-                
+
+                <li className="flex items-start"> 
+                  <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-gradient-to-r from-primary to-secondary text-white mr-3 flex-shrink-0">
+                    {/* Open reading book icon */}
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.75 6.75A2.25 2.25 0 0 1 5 4.5h5.25A2.25 2.25 0 0 1 12.5 6.75v12.75a.75.75 0 0 1-1.03.7l-4.47-1.79a2.25 2.25 0 0 0-1.75 0l-4.47 1.79A.75.75 0 0 1 1.5 19.5V6.75zM21.25 6.75A2.25 2.25 0 0 0 19 4.5h-5.25A2.25 2.25 0 0 0 11.5 6.75v12.75a.75.75 0 0 0 1.03.7l4.47-1.79a2.25 2.25 0 0 1 1.75 0l4.47 1.79a.75.75 0 0 0 1.03-.7V6.75z" />
+                    </svg>
+                  </span>
+                  <span className="text-gray-700">Regular practice tests and assessments.</span>
+                </li>
+
                 <li className="flex items-start">
                   <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-gradient-to-r from-primary to-secondary text-white mr-3 flex-shrink-0">
+                    {/* Book icon */}
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 20h9M12 4H3m9 0v16" />
                     </svg>
                   </span>
-                  <span className="text-gray-700">Regular practice tests and assessments</span>
-                </li>
-                
-                <li className="flex items-start">
-                  <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-gradient-to-r from-primary to-secondary text-white mr-3 flex-shrink-0">
-                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <span className="text-gray-700">Personalized attention and doubt clearing sessions</span>
+                  <span className="text-gray-700">Support for all age groups.</span>
                 </li>
               </ul>
               
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <div className="flex items-center">
                   <div className="h-10 w-10 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white font-bold text-lg">
-                    RS
+                    iCan
                   </div>
                   <div className="ml-3">
-                    <p className="text-sm font-medium text-gray-700">RS Chemtutor</p>
-                    <p className="text-xs text-gray-500">Excellence in Chemistry Education</p>
+                    <p className="text-sm font-medium text-gray-700">iCan Tutoring</p>
+                    <p className="text-xs text-gray-500">Build a Foundation of Excellenxe</p>
                   </div>
                 </div>
               </div>
