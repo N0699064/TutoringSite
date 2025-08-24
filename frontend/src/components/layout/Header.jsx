@@ -12,9 +12,8 @@ function Header() {
       } else {
         setScrolled(false);
       }
-      
       // Determine active section
-      const sections = ['home', 'about', 'courses', 'contact'];
+      const sections = ['home', 'about', 'courses', 'teacher', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -23,10 +22,8 @@ function Header() {
         }
         return false;
       }) || 'home';
-      
       setActiveSection(current);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -47,17 +44,17 @@ function Header() {
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto flex justify-between items-center p-4">
+  <div className="container mx-auto flex justify-between items-center p-4">
         <div className={`text-2xl font-bold transition-all duration-300 ${scrolled ? 'text-primary' : 'text-white'}`}>
           <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            RS
-          </span> ChemTutor
+            iCan
+          </span> Tutoring
         </div>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:block">
-          <ul className="flex space-x-8">
-            {['home', 'about', 'courses', 'contact'].map((item) => (
+            <nav className="hidden md:block ml-8 pr-16">
+          <ul className="flex space-x-6">
+            {['home', 'about', 'courses', 'teacher', 'contact'].map((item) => (
               <li key={item}>
                 <button 
                   onClick={() => scrollToSection(item)}
@@ -67,7 +64,7 @@ function Header() {
                       : 'text-white/80 hover:text-white'
                   } ${activeSection === item ? 'after:content-[""] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-2 after:w-1.5 after:h-1.5 after:bg-primary after:rounded-full' : ''}`}
                 >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                              {item === 'teacher' ? 'Tutors' : item.charAt(0).toUpperCase() + item.slice(1)}
                 </button>
               </li>
             ))}
@@ -100,13 +97,13 @@ function Header() {
       }`}>
         <nav className="container mx-auto p-4">
           <ul className="space-y-4">
-            {['home', 'about', 'courses', 'contact'].map((item) => (
+            {['home', 'about', 'courses', 'teacher', 'contact'].map((item) => (
               <li key={item}>
                 <button 
                   onClick={() => scrollToSection(item)}
                   className="w-full text-left text-gray-800 hover:text-primary py-2 font-medium"
                 >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                  {item === 'teacher' ? 'Tutors' : item.charAt(0).toUpperCase() + item.slice(1)}
                 </button>
               </li>
             ))}
